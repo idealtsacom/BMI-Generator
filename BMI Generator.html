@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    https://www.linkedin.com/posts/hassan-javaid159_master-frontend-with-these-projects-activity-7191678326577500160-t2HS?utm_source=share&utm_medium=member_desktop
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Generator</title>
+</head>
+<body>
+    <div class="Heading">
+        <h>BMI Generator</h>
+        <div class="Weight">
+            <label>Weight</label>
+            <input type="text" id="Weight" placeholder="Enter the Weight">
+        </div>
+        <div class="Height">
+            <label>Height</label>
+            <input type="text" id="Height" placeholder="Enter the Weight">
+        </div>
+        <button onclick="myfunction()">Calculate</button>
+        <div id="result"></div>
+
+    </div>
+    <script>
+           
+        function myfunction(){
+            var Weight = document.getElementById("Weight").value;
+            var Height = document.getElementById("Height").value;
+            var Result = document.getElementById("result");
+
+            if(!Weight || !Height){
+                alert("Please Enter A Value ")
+            }else{
+                var BMI = (Weight/((Height/100**2)));
+                Result.innerHTML=BMI;
+                // alert(BMI)
+            }
+            }
+    </script>
+</body>
+</html>
